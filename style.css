@@ -1,0 +1,326 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #5d436e;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin: 0px;
+}
+
+/*page structure*/
+.website{
+  position: fixed;  
+  height:100%; 
+  width: 100vw;
+  display: grid;
+  grid-template-rows: minmax(10px, auto) minmax(auto, 90%);
+  gap: 0px;
+  background-color: #987bab;
+  }
+.header{
+  grid-row: 1;
+  background-color: #775987;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.content{
+  grid-row: 2;
+  overflow-y: scroll;
+  
+}
+/*navbar*/
+.navbar{
+  flex-grow: 0;
+  background-color: #5d436e;
+  z-index: 9999;
+}
+/*text organization*/
+.subtitles{
+  text-align:center;
+}
+.text{
+  padding-top: 10px;
+}
+.calendar-desc{
+  padding-left: 10px;
+}
+/*pop-up forms global attributes*/
+.form-popup{
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 27rem;
+  height: 27rem;
+  background-color: #775987;
+  border: 3px solid #5d436e;
+}
+/*popup forms exit button*/
+.popup-exit-button{
+  height: 30px;
+  width: 30px;
+  float: right;
+  background-image: url(images/exit.png);
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  margin: 3px;
+}
+/*popup fullscreen container*/
+.fullscreen-container{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(90, 90, 90, 0.5);
+  z-index: 9999;
+}
+/*pop-up button global attributes*/
+.popup-button{
+  height: 35px;
+  width: 35px;
+  min-height: 35px;
+  min-width: 35px;
+  padding: 3px;
+  border: none;
+  background-color: transparent;
+  margin: min(3px);
+}
+
+
+
+
+/*homepage structure*/
+.home-content{
+  display: flex;
+  flex-direction: row;
+}
+/*bulletinboard*/
+#bulletinboard{
+  width: 80%;
+  background-color:#775987;
+  display: flex;
+  flex-direction: column;
+}
+.bulletinboard-header{
+  padding-bottom: 10px;
+  border-top: 3px ridge #5d436e;
+  display: flex;
+  justify-content: space-between;
+}
+.bulletin-title{
+  padding-left: 10px;
+}
+#bulletin-add-event-button{
+  background-image: url(images/add.png);
+  background-size: cover;
+}
+/*bulletinboard content*/
+#bulletinboard-content{
+  min-width: 98%;
+  flex-grow: 1;
+  background-color:#987bab;
+  align-self: center;
+  margin: 1%;
+  border: 3px ridge #5d436e;
+}
+/*calendar*/
+#calendar-add-event-button{
+  background-image: url(images/add.png);
+  background-size: cover;
+  margin-bottom: -10px;
+  align-self: end;
+  padding: 3px;
+}
+#calendar{
+  width: 20%;
+  border: 5px ridge #5d436e;
+  display: flex;
+  flex-direction: column;
+  background-color: #89659c;
+}
+#calendar-graphic{
+  font-size: max(10px);
+  margin: 10px;
+  border-bottom: 3px solid #5d436e;
+  flex-grow: 1fr;
+}
+#calendar-description{
+  flex-grow: 1fr;
+  height: 90%;
+  background-color: #987bab;
+  margin: 5px;
+  border: 3px ridge #5d436e;
+}
+/*if viewport gets too smalll*/
+@media only screen and (max-width: 809px) {
+  .home-content{
+    flex-direction: column;
+  }
+  #calendar{
+    width: 100%;
+    height: minmax(20%, auto);
+    flex-direction: row;
+    flex-grow: 1;
+  }
+  #bulletinboard{
+    width: 100%;
+    height: 80%;
+  }
+  #calendar-add-event-button{
+    align-self: start;
+    order: 2;
+  }
+  #calendar-graphic{
+    border: none;
+    width: 40%;
+    align-self: center;
+  }
+  #calendar-description{
+    width: 60%;
+    margin: 10px;
+    align-self: flex-end;
+  }
+}
+/*calendar-graphic*/
+.calendar-month{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.calendar-month img{
+  cursor: pointer;
+  height: 1rem;
+}
+.calendar-month h3{
+letter-spacing: 0.2rem;
+text-transform: uppercase;
+font-size: min(3vw, 16px);
+}
+.calendar-weekdays{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: minmax(15px, auto);
+  letter-spacing: .05rem;
+}
+.calendar-days{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1rem);
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+.calendar-days div{
+  justify-self: center;
+  min-height: 20px;
+}
+.calendar-prev-date, .calendar-next-date{
+  opacity: 0.6;
+}
+.calendar-today{
+  font-weight: 1000;
+}
+.calendar-days div:hover:not(.calendar-today){
+  border: 2px solid #6e4f82;
+}
+
+
+
+/*aboutpage edit button*/
+#about-edit-button{
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  float: right;
+  background-image: url(images/edit.png);
+  background-size: cover;
+  border: none;
+}
+
+
+
+/*instruments page structure*/
+#instruments-inventory-button{
+  padding: 10px;
+  position: absolute; 
+  right: 0px;
+}
+#instruments-inventory-button :hover{
+  color: white;
+}
+.instruments-list-grid-container{
+  display: grid;
+  grid-row-gap: 25px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: space-around;
+  padding: 4rem;
+}
+.instruments-list-grid-container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instruments-instruments{
+  height: 250px;
+  width: 250px;
+  border: 3px solid #5d436e;
+}
+.instruments-title{
+  font-weight: 700;
+}
+
+
+
+/*songs page structure*/
+#add-song-button{
+  background-image: url(images/add.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin: 5px;
+}
+/*if there are no songs present*/
+.songs-list-container-no-songs{
+  /*add display: none; for testing*/
+  padding-top: 10px;
+}
+/*if there's 1 more more songs*/
+.songs-list-container-songs{
+  /*change 'display: grid;' to 'display:none;' for testing*/
+  display: none;
+  grid-row-gap: 25px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: space-around;
+  padding: 1rem;
+}
+.songs-list-container-songs div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.songs-song-title{
+  font-weight: 700;
+  height: 25px;
+  width: 192.5px;
+  text-align: center;
+}
+.songs-song-file{
+  height: 250px;
+  width: 192.5px;
+  border: 3px solid #5d436e;
+}
+
+
+
+
+
+
