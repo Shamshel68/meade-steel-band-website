@@ -10,9 +10,9 @@ html, body {
 .website{
   position: fixed;  
   height:100%; 
-  width: 100vw;
+  width: 100%;
   display: grid;
-  grid-template-rows: minmax(10px, auto) minmax(auto, 90%);
+  grid-template-rows: 6.6rem auto;
   gap: 0px;
   background-color: #987bab;
   }
@@ -21,13 +21,12 @@ html, body {
   background-color: #775987;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
   
 }
 .content{
   grid-row: 2;
   overflow-y: scroll;
-  
 }
 /*navbar*/
 .navbar{
@@ -36,6 +35,28 @@ html, body {
   z-index: 9999;
 }
 /*text organization*/
+/*homepage title scroll*/
+@keyframes scroll {
+  0%{
+    -webkit-transform: translate(0, 0);
+  }
+  100%{
+    -webkit-transform: translate(-100%, 0);
+  }
+}
+.titles span{
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 20s infinite linear;
+}
+.titles{
+  display: block;
+  max-width: 100vw;
+  white-space: nowrap;
+  min-height: 50px;
+  overflow: hidden;
+}
+
 .subtitles{
   text-align:center;
 }
