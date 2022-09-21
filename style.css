@@ -155,7 +155,12 @@ html, body {
 #calendar-form-button:hover, #bulletin-form-button:hover{
   background-color:#89659c;
 }
-
+#home-bulletin-form-open{
+  display: none;
+}
+#home-calendar-form-open{
+  display: none;
+}
 
 
 /*homepage structure*/

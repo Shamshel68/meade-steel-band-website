@@ -69,12 +69,19 @@ renderCalendar();
 let popupexit = document.querySelector(".popup-exit-button");
 
 function openForm(){
-    document.querySelector('.fullscreen-container').style.display ='block'
+  document.querySelector('.fullscreen-container').style.display='block'
+}
+function openBulletinForm(){
+  document.querySelector('#home-form-open').style.display='none'
+  document.querySelector('#home-bulletin-form-open').style.display='block'
+}
+function openCalendarForm(){
+  document.querySelector('#home-form-open').style.display='none'
+  document.querySelector('#home-calendar-form-open').style.display='block'
 }
 
-
 popupexit.onclick = function(){
-    popup.style.display ='none'
+  popup.style.display ='none'
 };
 
 
