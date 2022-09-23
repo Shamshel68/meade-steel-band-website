@@ -73,11 +73,11 @@ function openForm(){
 }
 function openBulletinForm(){
   document.querySelector('#home-form-open').style.display='none'
-  document.querySelector('#home-bulletin-form-open-container').style.display='block'
+  document.querySelector('.home-bulletin-form-open-container').style.display='block'
 }
 function openCalendarForm(){
   document.querySelector('#home-form-open').style.display='none'
-  document.querySelector('#home-calendar-form-open-container').style.display='block'
+  document.querySelector('.home-calendar-form-open-container').style.display='block'
 }
 
 popupexit.onclick = function(){
