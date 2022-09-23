@@ -118,7 +118,7 @@ html, body {
   width: 100%;
   height: 100%;
 }
-#home-form-open h2{
+.form-headers{
   position: absolute;
   width: 100%;
   margin-left: auto;
@@ -155,13 +155,20 @@ html, body {
 #calendar-form-button:hover, #bulletin-form-button:hover{
   background-color:#89659c;
 }
-#home-bulletin-form-open{
+/*home and bulletin form containers*/
+.home-bulletin-form-open-container{
   display: none;
+}
+.home-calendar-form-open-container{
+  display: none;
+}
+/*home and bulletin forms*/
+#home-bulletin-form-open{
+  display: flex;
 }
 #home-calendar-form-open{
-  display: none;
+  display: flex;
 }
-
 
 /*homepage structure*/
 .home-content{

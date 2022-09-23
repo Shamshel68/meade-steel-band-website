@@ -13,6 +13,7 @@
 </head>
 
 <body>
+ 
  <!--viewport-->
  <div class="website">
 
@@ -45,19 +46,24 @@
   <!--content-->
   <div class="content home-content">
 
+    
     <!--bulletinboard container-->
     <div id="bulletinboard">
+      
       <!--bulletinboard header-->
       <div class="bulletinboard-header">
         <h2 class="text subtitles bulletin-title">Bulletin Board</h2>
         <button class="popup-button" id="bulletin-add-event-button" onclick = openForm()></button>
       </div>
+      
       <!--bulletinboard content-->
       <div id="bulletinboard-content">
       </div>
     </div>
+    
     <!--calendar container-->
     <div id="calendar">
+      
       <!--visible calendar-->
       <div id="calendar-graphic">
         <div class="calendar-month">
@@ -83,6 +89,7 @@
         <div class="calendar-days">
         </div>
       </div>
+      
       <!--calendar description-->
       <div id="calendar-description">
         <h5 class="text calendar-desc">desc.</h3>
@@ -99,20 +106,26 @@
         
         <!--post select page-->
         <div id="home-form-open">
-          <h2>Add Post</h2>
+          <h3 class="form-headers">Add Post</h3>
           <div>
             <button type='button' id="bulletin-form-button" onclick=openBulletinForm()></button>
             <button type='button' id="calendar-form-button" onclick=openCalendarForm()></button>
           </div>
           <p>calendar posts will appear in the bulletin baord.</p>
         </div>
+        
         <!--bulletin post page-->
-        <div id="home-bulletin-form-open">
-          g
+        <div class="home-bulletin-form-open-container">
+          <div id="home-bulletin-form-open">
+            <h3 class="form-headers">Bulletin Post</h3>
+          </div>
         </div>
+        
         <!--calendar post page-->
-        <div id="home-calendar-form-open">
-          h
+        <div class="home-calendar-form-open-container">
+          <div id="home-calendar-form-open">
+            <h3 class="form-headers">Calendar Post</h3>
+          </div>
         </div>
 
     </form>
