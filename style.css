@@ -198,12 +198,21 @@ html, body {
 }
 /*bulletinboard content*/
 #bulletinboard-content{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
   min-width: 98%;
   flex-grow: 1;
   background-color:#987bab;
   align-self: center;
   margin: 1%;
   border: 3px ridge #5d436e;
+}
+#bulletinboard-content div{
+  z-index: 9999;
+  width: 100%;
+  min-height: 50%;
+  border: 3px solid black;
 }
 /*calendar*/
 #calendar{
