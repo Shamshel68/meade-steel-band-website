@@ -208,11 +208,25 @@ html, body {
   margin: 1%;
   border: 3px ridge #5d436e;
 }
-#bulletinboard-content div{
+#bulletinboard-content-image-post{
   z-index: 9999;
   width: 100%;
-  min-height: 50%;
-  border: 3px solid black;
+  min-height: 400px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid #5d436e;
+}
+#bulletinboard-content-text-only{
+  z-index:9999;
+  width: 100%;
+  min-height: 150px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid #5d436e;
+  display: flex;
+  flex-direction: column;
 }
 /*calendar*/
 #calendar{
