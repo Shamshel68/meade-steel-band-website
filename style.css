@@ -197,7 +197,7 @@ html, body {
   margin-top: 1rem;
 }
 /*bulletinboard content*/
-#bulletinboard-content{
+  #bulletinboard-content{
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -212,41 +212,48 @@ html, body {
   z-index: 9999;
   width: 100%;
   min-height: 400px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 3px ridge #5d436e;
+  border-style: solid;
+  border-width: 7px;
+  border-top-color: #453252;
+  border-left-color: #453252;
+  border-right-color: #5d436e;
+  border-bottom-color: #5d436e;
   background-color: #9070A1;
 }
 #bulletinboard-content-text-only{
   z-index:9999;
   width: 100%;
-  min-height: 150px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 3px ridge #5d436e;
+  min-height: 200px;
+  border-style: solid;
+  border-width: 7px;
+  border-bottom-width: 10px;
+  border-top-color: #453252;
+  border-left-color: #453252;
+  border-right-color: #5d436e;
+  border-bottom-color: #5d436e;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #9070A1;
 }
 #text-post{
-  width: 98.5%; 
+  width: 98%; 
   flex-grow: 5;
+  background-color: #987bab;
+  border-left: 3px ridge #5d436e;
+  padding-left: 3px;
 }
 .signature{
   font-size: 0.9rem;
   align-self: flex-end;
-  margin-right: 10px;
-}
-#bulletinboard-content-text-only .signature{
-  flex-grow: 1;
+  margin-right: 20px;
+  margin-bottom: -7px;
+  flex-grow: 0.5;
 }
 #bulletinboard-content-text-only .titles{
   width: 98.5%;
   height: auto;
-  border-bottom: 2px solid #5d436e;
+  margin-bottom: -15px;
 }
 /*calendar*/
 #calendar{
@@ -267,7 +274,12 @@ html, body {
   height: 90%;
   background-color: #987bab;
   margin: 5px;
-  border: 3px ridge #5d436e;
+  border-style: solid;
+  border-width: 7px;
+  border-top-color: #453252;
+  border-left-color: #453252;
+  border-right-color: #5d436e;
+  border-bottom-color: #5d436e;
 }
 /*if viewport gets too smalll*/
 @media only screen and (max-width: 809px) {
