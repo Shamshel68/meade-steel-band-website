@@ -215,7 +215,8 @@ html, body {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 3px solid #5d436e;
+  border-bottom: 3px ridge #5d436e;
+  background-color: #9070A1;
 }
 #bulletinboard-content-text-only{
   z-index:9999;
@@ -224,9 +225,28 @@ html, body {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 3px solid #5d436e;
+  border-bottom: 3px ridge #5d436e;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #9070A1;
+}
+#text-post{
+  width: 98.5%; 
+  flex-grow: 5;
+}
+.signature{
+  font-size: 0.9rem;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+#bulletinboard-content-text-only .signature{
+  flex-grow: 1;
+}
+#bulletinboard-content-text-only .titles{
+  width: 98.5%;
+  height: auto;
+  border-bottom: 2px solid #5d436e;
 }
 /*calendar*/
 #calendar{
