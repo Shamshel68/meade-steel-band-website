@@ -204,14 +204,13 @@ html, body {
   flex-direction: column;
   overflow-y: scroll;
   min-width: 98%;
-  flex-grow: 1;
+  height: 100%;
   background-color:#987bab;
   align-self: center;
   margin: 1%;
   border: 3px ridge #5d436e;
 }
 .bulletinboard-content-text-only{
-  z-index:9999;
   width: 100%;
   min-height: 200px;
   border-style: solid;
@@ -239,7 +238,6 @@ html, body {
   padding-left: 3px;
 }
 .bulletinboard-content-media-only{
-  z-index: 9999;
   border-style: solid;
   border-width: 7px;
   border-top-color: #453252;
@@ -249,7 +247,6 @@ html, body {
   background-color: #9070A1;
 }
 .bulletinboard-content-media-post{
-  z-index: 9999;
   border-style: solid;
   border-width: 7px;
   border-top-color: #453252;
@@ -296,20 +293,23 @@ html, body {
   border-right-color: #5d436e;
   border-bottom-color: #5d436e;
 }
-/*if viewport gets too smalll*/
-@media only screen and (max-width: 809px) {
+/*if viewport gets too smalll or big*/
+@media only screen and (max-width: 1080px){
   .home-content{
     flex-direction: column;
   }
   #calendar{
     width: 100%;
-    height: minmax(20%, auto);
     flex-direction: row;
-    flex-grow: 1;
+    min-height: 223px;
   }
   #bulletinboard{
     width: 100%;
-    height: 80%;
+    min-height: 40%;
+    flex-grow: 1;
+  }
+  #bulletinboard-content{
+    width: 98%;
   }
   #calendar-add-event-button{
     align-self: start;
@@ -341,7 +341,7 @@ html, body {
 .calendar-month h3{
 letter-spacing: 0.2rem;
 text-transform: uppercase;
-font-size: min(3vw, 16px);
+font-size: min(3vw, 15px);
 }
 .calendar-weekdays{
   width: 100%;
@@ -363,7 +363,7 @@ font-size: min(3vw, 16px);
 .calendar-days div{
   justify-self: center;
   min-height: 20px;
-  padding: .2rem;
+  padding: .18rem;
 }
 .calendar-prev-date, .calendar-next-date{
   opacity: 0.6;
