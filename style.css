@@ -210,60 +210,91 @@ html, body {
   margin: 1%;
   border: 3px ridge #5d436e;
 }
+/*the text only content presets*/
 .bulletinboard-content-text-only{
   width: 100%;
   min-height: 200px;
-  border-style: solid;
-  border-width: 7px;
-  border-bottom-width: 10px;
-  border-top-color: #453252;
-  border-left-color: #453252;
-  border-right-color: #5d436e;
-  border-bottom-color: #5d436e;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #9070A1;
 }
 .bulletinboard-content-text-only .titles{
   width: 98.5%;
   height: auto;
   margin-bottom: -15px;
 }
-.text-only{
+.text-only-container{
   width: 98%; 
   flex-grow: 5;
   background-color: #987bab;
-  border-left: 3px ridge #5d436e;
+  
   padding-left: 3px;
+  overflow-y: scroll;
 }
-.bulletinboard-content-media-only{
-  border-style: solid;
-  border-width: 7px;
-  border-top-color: #453252;
-  border-left-color: #453252;
-  border-right-color: #5d436e;
-  border-bottom-color: #5d436e;
-  background-color: #9070A1;
-}
-.bulletinboard-content-media-post{
-  border-style: solid;
-  border-width: 7px;
-  border-top-color: #453252;
-  border-left-color: #453252;
-  border-right-color: #5d436e;
-  border-bottom-color: #5d436e;
-  background-color: #9070A1;
-}
-.media img{
-}
-.signature{
-  font-size: 0.9rem;
-  font-style: italic;
+.bulletinboard-content-text-only .signature{
   align-self: flex-end;
-  margin-right: 20px;
-  margin-bottom: -7px;
+  margin-right: 2%;
   flex-grow: 0.5;
+}
+/*the media only content presets*/
+.bulletinboard-content-media-only .media-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0% 1%;
+  
+}
+.bulletinboard-content-media-only .media-container .bulletin-board-media-file{
+  border: 3px ridge #5d436e;
+  width: auto;
+}
+.bulletinboard-content-media-only .signature{
+  float: right; 
+  margin-right: 2%;
+}
+/*the media post presets*/
+.media-post-container{
+  display: flex;
+}
+.bulletinboard-content-media-post .media-container{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+.bulletinboard-content-media-post .media-container .bulletin-board-media-file{
+  max-height: 100%;
+  max-width: 75%;
+  border: 3px ridge #5d436e;
+}
+.media-description{
+  width: 50%;
+  border: 3px ridge #5d436e;
+  margin-bottom: 1rem;
+  background-color: #987bab;
+  margin-right: 0.9rem;
+}
+.bulletinboard-content-media-post .signature{
+  float: right;
+  margin-right: 2%;
+}
+/*universal presets*/
+.signature{
+  font-size: 1rem;
+  font-style: italic;
+}
+.bulletinboard-content-post{
+  border-style: solid;
+  border-width: 7px;
+  border-top-color: #453252;
+  border-left-color: #453252;
+  border-right-color: #5d436e;
+  border-bottom-color: #5d436e;
+  background-color: #9070A1;
+}
+/*make them not show up if they're empty (won't need this after i add JS)*/
+.bulletinboard-content-post :empty{
+  display: none;
 }
 
 /*calendar*/
